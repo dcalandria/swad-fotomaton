@@ -32,8 +32,11 @@ TARGETS=create_feature_set train_cascade fotomaton
 all: $(TARGETS)
 
 create_feature_set: create_feature_set.o haar_feature.o io_rutines.o
+	$(CXX) -o $@ $^ $(CXXFLAGS) $(LDFLAGS)
 train_cascade: train_cascade.o haar_feature.o haar_classifier.o io_rutines.o util.o training.o adaboost.o cascade.o
+	$(CXX) -o $@ $^ $(CXXFLAGS) $(LDFLAGS)
 fotomaton: haar_feature.o haar_classifier.o io_rutines.o util.o cascade.o fotomaton.o
+	$(CXX) -o $@ $^ $(CXXFLAGS) $(LDFLAGS)
 clean:
 	rm -f *.o
 
