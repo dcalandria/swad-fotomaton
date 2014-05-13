@@ -58,7 +58,6 @@ CvSeq* CascadeClassifier::detect_objects (const CvMat *img, const CvSize& object
            
   CvRect wnd_rect;
   int total_size;
-  int norm_factor;
   int img_size_x, img_size_y;    
 
   for (REAL scale = 1.0; ; scale *= scale_factor)

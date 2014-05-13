@@ -122,9 +122,8 @@ int main (int argc, char **argv)
         if ( cascade.simple_classify_lvl ( set[j], i+1 )  == -1 ) //clasificado correctamente
           index.push_back ( j );
     }    
-    unsigned orig_size = index.size();
     //if (!valnegnames.empty())
-    while(index.size() /*> orig_size/8*/)
+    while(index.size() )
     {
       cout << "RESAMPLE: " << valnegnames[p].c_str() << endl;
       IplImage *img = cvLoadImage ( valnegnames[p++].c_str() );

@@ -24,10 +24,6 @@
 
 void HaarFeature::draw ( CvArr *img )
 {
-  CvSize img_size = cvGetSize(img);
-  
-  /*if ( size.width > img_size.width || size.height > img_size.height)
-    return;*/
   
   //Dibujar la caracterista  
   const int *ptr = points;
